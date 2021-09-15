@@ -49,27 +49,30 @@ struct MotionAnimationView: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            ForEach(0...randomCircles, id: \.self) { item in
-                Circle()
-                    .foregroundColor(Color.random)
-                    .opacity(0.15)
-                    .frame(width: randomSize(), height: randomSize(), alignment: .center)
-                    .scaleEffect(isAnimating ? randomScale() : 1)
-                    .position(
-                        x: randomCoordinate(max: geometry.size.width),
-                        y: randomCoordinate(max: geometry.size.height)
-                )
-                    .animation(
-                        Animation
-                            .interpolatingSpring(stiffness: 0.5, damping: 0.5)
-                            .repeatForever()
-                            .speed(randomSpeed())
-                             .delay(randomDelay())
+            ZStack {
+                ForEach(0...randomCircles, id: \.self) { item in
+                    Circle()
+                        .foregroundColor(Color.random)
+                        .opacity(0.15)
+                        .frame(width: randomSize(), height: randomSize(), alignment: .center)
+                        .scaleEffect(isAnimating ? randomScale() : 1)
+                        .position(
+                            x: randomCoordinate(max: geometry.size.width),
+                            y: randomCoordinate(max: geometry.size.height)
                     )
-                    .onAppear(perform: {
-                        isAnimating = true
-                    })
+                        .animation(
+                            Animation
+                                .interpolatingSpring(stiffness: 0.5, damping: 0.5)
+                                .repeatForever()
+                                .speed(randomSpeed())
+                                 .delay(randomDelay())
+                        )
+                        .onAppear(perform: {
+                            isAnimating = true
+                        })
+                }
             }
+            .drawingGroup()
         }
     }
 }
