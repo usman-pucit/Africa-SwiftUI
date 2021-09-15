@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183C5B2B26F1E52500B25005 /* NationalParkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C5B2A26F1E52500B25005 /* NationalParkLocation.swift */; };
+		183C5B2D26F1E77600B25005 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183C5B2C26F1E77600B25005 /* MapAnnotationView.swift */; };
 		18D1F1E926F0BF5100B26185 /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1F1E826F0BF5100B26185 /* AfricaApp.swift */; };
 		18D1F1EB26F0BF5100B26185 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1F1EA26F0BF5100B26185 /* ContentView.swift */; };
 		18D1F1ED26F0BF5400B26185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D1F1EC26F0BF5400B26185 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183C5B2A26F1E52500B25005 /* NationalParkLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalParkLocation.swift; sourceTree = "<group>"; };
+		183C5B2C26F1E77600B25005 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		18D1F1E526F0BF5100B26185 /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D1F1E826F0BF5100B26185 /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		18D1F1EA26F0BF5100B26185 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				18D1F23526F1050E00B26185 /* GalleryView.swift */,
 				18D1F23926F10A3300B26185 /* VideoListItemView.swift */,
 				18D1F23D26F1129000B26185 /* VideoPlayerView.swift */,
+				183C5B2C26F1E77600B25005 /* MapAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				18D1F21E26F0E94D00B26185 /* CoverImage.swift */,
 				18D1F22026F0F17200B26185 /* Animal.swift */,
 				18D1F23B26F10A7800B26185 /* Video.swift */,
+				183C5B2A26F1E52500B25005 /* NationalParkLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183C5B2D26F1E77600B25005 /* MapAnnotationView.swift in Sources */,
 				18D1F21C26F0E85500B26185 /* CoverImageView.swift in Sources */,
 				18D1F22526F0F5EA00B26185 /* AnimalDetailView.swift in Sources */,
 				18D1F21F26F0E94D00B26185 /* CoverImage.swift in Sources */,
 				18D1F1EB26F0BF5100B26185 /* ContentView.swift in Sources */,
+				183C5B2B26F1E52500B25005 /* NationalParkLocation.swift in Sources */,
 				18D1F23026F1017800B26185 /* MapView.swift in Sources */,
 				18D1F23A26F10A3300B26185 /* VideoListItemView.swift in Sources */,
 				18D1F23426F104FF00B26185 /* VideoListView.swift in Sources */,
