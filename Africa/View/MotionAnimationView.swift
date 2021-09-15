@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+extension Color {
+    static var random: Color {
+        return Color(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1)
+        )
+    }
+}
+
 struct MotionAnimationView: View {
     
     @State private var randomCircles : Int = Int.random(in: 12...16)
@@ -32,13 +42,16 @@ struct MotionAnimationView: View {
         return Double.random(in: 0.025...1)
     }
     
-    // Randelayom 
+    // Random delay
+    func randomDelay() -> Double {
+        return Double.random(in: 0...2)
+    }
     
     var body: some View {
         GeometryReader{ geometry in
             ForEach(0...randomCircles, id: \.self) { item in
                 Circle()
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color.random)
                     .opacity(0.15)
                     .frame(width: randomSize(), height: randomSize(), alignment: .center)
                     .scaleEffect(isAnimating ? randomScale() : 1)
@@ -51,7 +64,7 @@ struct MotionAnimationView: View {
                             .interpolatingSpring(stiffness: 0.5, damping: 0.5)
                             .repeatForever()
                             .speed(randomSpeed())
-                             .delay(1)
+                             .delay(randomDelay())
                     )
                     .onAppear(perform: {
                         isAnimating = true
